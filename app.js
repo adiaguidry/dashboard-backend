@@ -131,7 +131,7 @@ async function createHealthTrack() {
   console.log(result);
 }
 
-// createHealthTrack()
+createHealthTrack();
 
 app.get("/healthtracker", async (req, res) => {
   try {
