@@ -14,7 +14,7 @@ app.use(express.json());
 //dash_db = mongodb+srv://JaneDoe:<password>@adiascloud-stqqj.mongodb.net/test?retryWrites=true&w=majority
 
 mongoose
-  .connect(dash_db)
+  .connect("dash_db")
   .then(() => console.log("Connected to MongoDB...You got it Adia"))
   .catch(err => console.error("could not connect", err));
 
