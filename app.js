@@ -134,9 +134,13 @@ mongoose
 // }
 
 app.get("/healthtracker", async (req, res) => {
-  const healthtracker = await HealthTrack.find();
-  console.log(healthtracker);
-  res.send(healthtracker);
+  try {
+    const healthtracker = await HealthTrack.find();
+    console.log(healthtracker);
+    res.send(healthtracker);
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 // view engine setup
